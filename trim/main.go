@@ -57,7 +57,7 @@ func main() {
 	}
 
 	type SubImager interface {
-    SubImage(r image.Rectangle) image.Image
+		SubImage(r image.Rectangle) image.Image
 	}
 
 	outImg := img.(SubImager).SubImage(image.Rect(int(minX), int(minY), int(maxX), int(maxY)))
