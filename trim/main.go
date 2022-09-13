@@ -60,7 +60,7 @@ func main() {
 		SubImage(r image.Rectangle) image.Image
 	}
 
-	outImg := img.(SubImager).SubImage(image.Rect(int(minX), int(minY), int(maxX), int(maxY)))
+	outImg := img.(SubImager).SubImage(image.Rect(int(minX), int(minY), int(maxX) + 1, int(maxY) + 1))
 	outImgFileName := os.Args[1]
 	if len(os.Args) >= 3 {
 		outImgFileName = os.Args[2]
